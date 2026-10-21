@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
+    <script src="JavaScript/index.js"></script>
+    <script>window.addEventListener("load", function () { mes(); dia(); ano();});</script>
+    <title>Contacto</title>
+</head>
+<header>
+    <nav>
+        <h1><a href="Index.html"><span class="parte2">DeCastro</span><span class="parte2"> Sports</span></a></h1>
+        <ul id="enlacesnav">
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="utilidades.html">UTILIDADES</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+
+        <time datetime="" id="calendario">
+            <span id="ano" class="fecha"></span>
+            <span id="dia" class="fecha"></span>
+            <span id="mes" class="fecha"></span>
+        </time>
+    </nav>
+</header>
+<body>
+    <div id="principal">
+        <main>
+            <aside id="direccion" class="izquierda">
+                <h4>Dirección</h4>
+                <hr>
+                <ul>
+                    <li>Polideportivo Municipal</li>
+                    <li>Calle del Deporte, 4</li>
+                    <li>Horario oficina: 17:00-20:00</li>
+                </ul>
+            </aside>
+            <section>
+                <h3>Contacta con nosotros</h3>
+                <p>Resolvemos dudas sobre inscripciones, categorías y horarios.</p>
+                <form action="ws/createElement.php" method="post">
+                    <label for="">
+                        Nombre
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu Nombre">
+                    </label>
+                    <label for="">
+                        Correo electrónico
+                        <input type="email" name="email" placeholder="tu@correo.com">
+                    </label>
+                    <label for="">
+                        Mensaje
+                        <textarea name="mensaje" placeholder="Escribe tu consulta"></textarea>
+                    </label>
+                    <button onclick="return validarNombre()">Enviar</button>
+                </form>
+            </section>
+            <aside id="redes" class="derecha">
+                <h4>Redes Sociales</h4>
+                <hr>
+                <ul>
+                    <li><a href="">Instagram</a></li>
+                    <li><a href="">Twitter / X</a></li>
+                    <li><a href="">Facebook</a></li>
+                </ul>
+            </aside>
+        </main>
+    </div>
+</body>
+<footer>
+    <h6>Asociación Deportiva DeCastro SPORTS.</h6>
+    <p>Web desarrollada por: Nombre Apellido1 Apellido2</p>
+    <p><a href="">Aviso Legal</a>-- Se abrirá en una ventana sin barras de scroll ni de menú.</p>
+</footer>
+</html>

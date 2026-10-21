@@ -1,0 +1,220 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    border-bottom: 4px;
+    border-color: blue;
+    align-items: center;
+    gap: 50px;
+    border-bottom: 1px solid #0A1830;
+}
+
+nav h1 {
+    margin-left: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #0A1830;
+}
+
+.izquierda,
+.derecha {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.parte1 { color: blue; }
+.parte2 { color: #E8590C; }
+
+#enlacesnav {
+    margin-left: auto;
+    display: flex;
+    gap: 20px;
+}
+
+.fecha {
+    color: #FFFFFF;
+    padding: 0px 20px 0px 20px;
+    text-align: center;
+}
+
+#calendario {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #0A1830;
+    border-radius: 5px;
+    margin-right: 30px;
+}
+
+#ano {
+    background-color: #0A1830;
+}
+
+#mes {
+    background-color: #2FA84F;
+}
+
+#dia {
+    color: #000000;
+}
+
+#principal {
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+footer {
+    font-size: 18px;
+    padding: 30px;
+    margin-top: 20px;
+    color: white;
+    background-color: #0A1830;
+}
+
+footer a {
+    color: orange;
+    text-decoration: underline;
+}
+
+/* Formularios (contacto y calculadoras) */
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    color: #10243E;
+}
+
+input,
+select,
+textarea {
+    padding: 10px 12px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: #333333;
+    background-color: #FFFFFF;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #999999;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: #10243E;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+button {
+    align-self: flex-start; /* que no se estire en los formularios flex */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #E8590C;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #C44A09;
+}
+
+/* utilidades.html */
+
+#calculadoras {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+.calculadora {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulocal {
+    padding: 10px;
+    padding-right: 60px;
+    background-color: #10243E;
+    color: #FFFFFF;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.celdaHorario {
+    padding: 10px;
+}
+
+main > div,
+main > section {
+    flex: 1;
+    min-width: 0;
+}
+
+#manana,
+#tarde {
+    overflow-x: auto;
+    margin-top: 30px;
+}
+
+th.titulocal {
+    padding-right: 10px;
+}
+
+.activo {
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: #2FA84F;
+}
+
+#titulo-eventos {
+    border-bottom: 2px solid #CCCCCC;
+}
+
+#proximos li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.btn-quitar-evento {
+    padding: 2px 8px;
+    font-size: 12px;
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
+    <script src="JavaScript/index.js"></script>
+    <script>window.addEventListener("load", function () { mes(); dia(); ano(); pintarHorario(document.getElementById("manana"), DIAS_MANANA, HORAS); pintarHorario(document.getElementById("tarde"), DIAS_TARDE, HORAS);}); </script>
+    <title>Utilidades</title>
+</head>
+<header>
+    <nav>
+        <h1><a href="Index.html"><span class="parte2">DeCastroSports</span></a></h1>
+        <ul id="enlacesnav">
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="utilidades.html">UTILIDADES</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+
+        <time datetime="" id="calendario">
+            <span id="ano" class="fecha"></span>
+            <span id="dia" class="fecha"></span>
+            <span id="mes" class="fecha"></span>
+        </time>
+    </nav>
+</header>
+<body>
+    <div id="principal">
+        <main>
+            <aside id="proximos" class="izquierda">
+                <h4>Utilidades</h4>
+                <hr>
+                <ul>
+                    <li><a href="">Calculadora IMC</a></li>
+                    <li><a href="" id="segundo">Calculadora FMC</a></li>
+                    <li><a href="">Categoría</a></li>
+                    <li><a href="">Horario</a></li>
+                </ul>
+            </aside>
+            <div>
+                <div>
+                    <h1>Utilidades</h1>
+                    <p>Cuatro herramientas para socios y familias. Los cálculos se completarán con JavaScript en Entorno Cliente (archivo funciones.js)</p>
+                </div>
+                <div id="calculadoras">
+                    <article id="bienvenida">
+                        <h3 class="titulocal">Calculadora de IMC</h3> 
+                        <form action="" id="calculadoraImc" class="calculadora" onsubmit="imc(event)">
+                            <label for="">
+                                Peso (kg)
+                                <input type="number" name="peso" id="peso" required min="20" max="600" step="any">
+                            </label>
+                            <label for="">
+                                Estatura (cm)
+                                <input type="number" name="estatura" id="estatura" required min="20" max="300" step="any">
+                            </label>
+                            <button>Enviar</button>
+                            <p id="resultadoImc"></p>
+                            <ul>
+                                <li data-min="0" data-max="15.99"> &lt; 16.00 Infrapeso (delgadez severa)</li>
+                                <li data-min="16" data-max="16.99"> 16.00-16.99 Infrapeso (delgadez moderada)</li>
+                                <li data-min="17" data-max="18.49"> 17.00–18.49 — Infrapeso (delgadez aceptable)</li>
+                                <li data-min="18.50" data-max="24.99" > 18.50–24.99 — Peso normal</li>
+                                <li data-min="25" data-max="29.99" > 25.00–29.99 — Sobrepeso</li>
+                                <li data-min="30" data-max="34.99" > 30.00–34.99 — Obeso (Tipo I)</li>
+                                <li data-min="35" data-max="40" > 35.00–40.00 — Obeso (Tipo II)</li>
+                                <li data-min="40.01" data-max="999"> &gt; 40.00 — Obeso (Tipo III)</li>
+                            </ul>
+                        </form> 
+                    </article>
+                    <article>
+                        <h3 class="titulocal">Frecuencia cardíaca</h3>
+                        <form action="" id="calculadoraFcm" class="calculadora" onsubmit="fcm(event)">
+                            <label for="">
+                                Edad
+                                <input type="number" name="edad" id="edad" required min="1" max="120">
+                            </label>
+                            <label for="">
+                                Sexo
+                                <select name="sexo" id="sexoFcm">
+                                    <option value="mujer">Mujer</option>
+                                    <option value="hombre">Hombre</option>
+                                </select>
+                            </label>
+                            <button>Enviar</button>
+                            <p id="resultadoFcm"></p>
+                            <ul>
+                                <li data-min="60%" data-max="70%" >Zona de recuperación (60%–70%)<span></span></li>
+                                <li data-min="70.01%" data-max="80%">Zona aeróbica (70%–80%)<span></span></li>
+                                <li data-min="80.01%" data-max="90%" >Zona anaeróbica (80%–90%)<span></span></li>
+                                <li data-min="90.01%" data-max="100%" >Línea roja (90%–100%)<span></span></li>
+                            </ul>
+                        </form>
+                    </article>
+                    <article>
+                        <h3 class="titulocal">Categoría por edad</h3>
+                        <form action="" id="calculadoraCategoria" class="calculadora" onsubmit="categoria(event)">
+                            <label for="">
+                                Año de nacimiento
+                                <input type="number" name="ano_nacimiento" id="anoNacimiento" required min="1900">
+                            </label>
+                            <label for="">
+                                Sexo
+                                <select name="sexo" id="sexoCategoria">
+                                    <option value="mujer">Mujer</option>
+                                    <option value="hombre">Hombre</option>
+                                </select>
+                            </label>
+                            <button>Calcular categoría</button>
+                            <p id="resultadoCategoria">Introduce el año de nacimiento y pulsa "Calcular categoría"</p>
+                            <ul>
+                                <li data-min="8" data-max="10">Benjamín (8-10)</li>
+                                <li data-min="11" data-max="12">Alevín (11-12)</li>
+                                <li data-min="13" data-max="14">Infantil (13-14)</li>
+                                <li data-min="15" data-max="16">Cadete (15-16)</li>
+                            </ul>
+                        </form>
+                    </article>
+                </div>
+                <div id="manana">
+
+                </div>
+                <div id="tarde">
+                    
+                </div>
+            </div>
+            <aside id="accesos" class="derecha">
+                <h4>¿Sabías que...?</h4>
+                <hr>
+                <ul>
+                    <li><a href="">El IMC no distingue masa muscular de grasa.</a></li>
+                    <li><a href="">La FCM es orientativa, no un valor médico exacto.</a></li>
+                </ul>
+            </aside>
+        </main>
+    </div>
+</body>
+<footer>
+    <h6>Asociación Deportiva DeCastro SPORTS.</h6>
+    <p>Web desarrollada por: Nombre Apellido1 Apellido2</p>
+    <p><a href="">Aviso Legal</a>-- Se abrirá en una ventana sin barras de scroll ni de menú.</p>
+</footer>
+</html>

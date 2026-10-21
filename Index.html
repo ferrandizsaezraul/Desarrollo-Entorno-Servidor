@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/Index.css">
+    <script src="JavaScript/index.js"></script>
+    <script>window.addEventListener("load", function () { mes(); dia(); ano(); anadirEvento(NUEVO_EVENTO); mostrarEventos(); delegacionEventos();});</script>
+    <title>DeCastro</title>
+</head>
+<header>
+    <nav>
+        <h1><a href="Index.html"><span class="parte1">DeCastro</span><span class="parte2"> Sports</span></a></h1>
+        <ul id="enlacesnav"> 
+            <li><a href="Index.html">HOME</a></li>
+            <li><a href="utilidades.html">UTILIDADES</a></li>
+            <li><a href="contacto.html">CONTACTO</a></li>
+        </ul>
+
+        <time datetime="" id="calendario">
+            <span id="ano" class="fecha"></span>
+            <span id="dia" class="fecha"></span>
+            <span id="mes" class="fecha"></span>
+        </time>
+    </nav>
+</header>
+<div id="principal">
+    <main>
+        <aside id="proximos" class="izquierda" aria-labelledby="titulo-eventos">
+            <h4 id="titulo-eventos">Próximos eventos</h4>
+            <ul>
+                <li><a href="">Liga local -- Jornada 12</a> <button class="btn-quitar-evento">Quitar</button></li>
+                <li><a href="">Torneo benjamín-alevin</a> <button class="btn-quitar-evento">Quitar</button></li>
+                <li><a href="">Entrenamiento abierto</a> <button class="btn-quitar-evento">Quitar</button></li>
+                <li><a href="">Asamblea de socios</a> <button class="btn-quitar-evento">Quitar</button></li>
+            </ul>
+        </aside>
+        <section id="bienvenida">
+            <h2>Bienvenidos a DeCastro Sports</h2>  
+            <p>Somos una asociación deportiva dedicada a fomentar el deporte base en todas sus categorías, desde los más pequeños hasta el equipo sénior. Consulta nuestras herramientas y horarios en la sección Utilidades.</p>
+            <p>Esta página se completará más adelante con JavaScript: el pequeño calendario de la cabecera mostrará la fecha actual, y al cargar la página aparecerá una ventana de bienvenida.</p>
+        </section>
+        <aside id="accesos" class="derecha">
+            <h4>Accesos rápidos</h4>
+            <hr>
+            <ul>
+                <li><a href="utilidades.html">Calculadora de IMC</a></li>
+                <li><a href="">Calculadora de FCM</a></li>
+                <li><a href="">Categoría por edad</a></li>
+                <li><a href="">Horario de la asociación</a></li>
+            </ul>
+        </aside>
+    </main>
+</div>
+<footer>
+    <h5>Asociación Deportiva DeCastro SPORTS.</h5>
+    <p>Web desarrollada por: Nombre Apellido1 Apellido2</p>
+    <p><a href="">Aviso Legal</a>-- Se abrirá en una ventana sin barras de scroll ni de menú.</p>
+</footer>
+</html>
