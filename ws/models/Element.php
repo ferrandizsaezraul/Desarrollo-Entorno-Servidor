@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=1);
-
 namespace Ws\Models;
 
 use Ws\Interfaces\IToJson;
@@ -51,10 +49,6 @@ class Element implements IToJson
 
     public function toJson(): string
     {
-        // get_object_vars() incluye todas las propiedades, también las privadas
-        return json_encode(
-            get_object_vars($this),
-            JSON_UNESCAPED_UNICODE | JSON_INVALID_UTF8_SUBSTITUTE | JSON_THROW_ON_ERROR
-        );
+        return json_encode(get_object_vars($this), JSON_UNESCAPED_UNICODE);
     }
 }
